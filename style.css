@@ -1,0 +1,70 @@
+/*Define estilos para o corpo do documento, como a fonte e a margem.*/
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/*Define estilos para o contêiner da página, como a largura máxima, margem e padding*/
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/*Define estilos para o formulário, como a direção da flexbox e o alinhamento dos itens.*/
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*Define estilos para as etiquetas do formulário, como a margem e o peso da fonte.*/
+label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/*Define estilos para os campos do formulário, como a largura, padding e borda.*/
+input[type="text"], input[type="number"], textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/*Define estilos para o botão de submissão do formulário, como a cor de fundo, cor do texto e borda*/
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+/*- Define estilos para a lista de produtos, como a remoção da lista e a margem.
+*/
+#lista-produtos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#lista-produtos li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+#lista-produtos li:last-child {
+  border-bottom: none;
+}
