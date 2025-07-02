@@ -1,70 +1,111 @@
-/*Define estilos para o corpo do documento, como a fonte e a margem.*/
+/* Estilos gerais (você pode já ter algo parecido) */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  font-family: sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
 }
 
-/*Define estilos para o contêiner da página, como a largura máxima, margem e padding*/
 .container {
   max-width: 800px;
-  margin: 40px auto;
+  margin: 30px auto;
   padding: 20px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/*Define estilos para o formulário, como a direção da flexbox e o alinhamento dos itens.*/
 form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 10px;
 }
 
-/*Define estilos para as etiquetas do formulário, como a margem e o peso da fonte.*/
-label {
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-/*Define estilos para os campos do formulário, como a largura, padding e borda.*/
-input[type="text"], input[type="number"], textarea, select {
-  width: 100%;
+input, textarea, select, button {
   padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
   border-radius: 5px;
+  border: 1px solid #ddd;
 }
 
-/*Define estilos para o botão de submissão do formulário, como a cor de fundo, cor do texto e borda*/
 button[type="submit"] {
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
+  background-color: #5cb85c;
+  color: white;
+  font-weight: bold;
   cursor: pointer;
+  border: none;
 }
 
 button[type="submit"]:hover {
-  background-color: #3e8e41;
+  background-color: #4cae4c;
 }
 
-/*- Define estilos para a lista de produtos, como a remoção da lista e a margem.
-*/
-#lista-produtos {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* --- NOVOS ESTILOS PARA FEEDBACK --- */
+#mensagem-feedback {
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  display: none; /* Começa escondido */
 }
 
-#lista-produtos li {
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
+#mensagem-feedback.sucesso {
+  background-color: #d4edda;
+  color: #155724;
+  display: block;
 }
 
-#lista-produtos li:last-child {
-  border-bottom: none;
+#mensagem-feedback.erro {
+  background-color: #f8d7da;
+  color: #721c24;
+  display: block;
+}
+/* --- FIM DOS NOVOS ESTILOS --- */
+
+
+/* Estilos para a tabela de produtos */
+.tabela-produtos {
+  width: 100%;
+  overflow-x: auto;
+}
+
+#tabela-produtos {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#tabela-produtos th, 
+#tabela-produtos td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+#tabela-produtos th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#tabela-produtos tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Estilos para botões de ação */
+.btn-editar, .btn-excluir {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn-editar {
+  background-color: #2196F3;
+  color: white;
+}
+
+.btn-excluir {
+  background-color: #f44336;
+  color: white;
 }

@@ -7,22 +7,23 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!--Cria um contêiner para o conteúdo da página.-->
   <div class="container">
-
-    <!--Define o título da página.-->
     <h1>Cadastro de Produtos</h1>
 
-    <!--Cria um formulário para cadastrar produtos.-->
-    <form id="form-cadastro">
+    <!-- Elemento para exibir mensagens de sucesso ou erro -->
+    <div id="mensagem-feedback"></div>
 
-      <!--Definem os campos do formulário para nome, descrição, preço e categoria do produto.-->
+    <form id="form-cadastro">
       <label for="nome">Nome do Produto:</label>
       <input type="text" id="nome" required>
+      
       <label for="descricao">Descrição do Produto:</label>
       <textarea id="descricao" required></textarea>
+      
       <label for="preco">Preço do Produto:</label>
-      <input type="number" id="preco" required>
+      <!-- Adicionado min="0" para evitar preços negativos no navegador -->
+      <input type="number" id="preco" step="0.01" min="0" required>
+      
       <label for="categoria">Categoria do Produto:</label>
       <select id="categoria" required>
         <option value="">Selecione uma categoria</option>
@@ -30,14 +31,28 @@
         <option value="cerveja">Cerveja</option>
         <option value="suco">Suco</option>
       </select>
-
-      <!--Cria um botão para submeter o formulário.-->
+      
       <button type="submit">Cadastrar</button>
     </form>
-    <h2>Lista de Produtos</h2>
 
-    <!-- Cria uma lista para exibir os produtos cadastrados.-->
-    <ul id="lista-produtos"></ul>
+    <h2>Lista de Produtos</h2>
+    
+    <div class="tabela-produtos">
+      <table id="tabela-produtos">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Preço</th>
+            <th>Categoria</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="lista-produtos">
+          <!-- Os produtos serão inseridos aqui via JavaScript -->
+        </tbody>
+      </table>
+    </div>
   </div>
 
   <script src="script.js"></script>
